@@ -1,4 +1,3 @@
 {
-  "presets": ["env"],
-  "plugins": ["./packages/babel-preset-jue"]
+  "presets": ["env", "./packages/babel-preset-jue/index.js"]
 }

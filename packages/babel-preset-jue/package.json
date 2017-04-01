@@ -15,7 +15,8 @@
   "dependencies": {
     "babel-plugin-transform-jue-jsx": "^0.1.0",
     "babel-plugin-syntax-jsx": "^6",
-    "babel-helper-vue-jsx-merge-props": "latest"
+    "babel-helper-vue-jsx-merge-props": "latest",
+    "babel-plugin-jue-require": "latest"
   },
   "xo": false
 }

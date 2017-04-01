@@ -17,7 +17,11 @@ function isJueTagName(name) {
     'BeforeMount',
     'BeforeUpdate',
     'Deactivated',
-    'Activated'
+    'Activated',
+    'Watch',
+    'Directives',
+    'Filters',
+    'RenderError'
   ].indexOf(name) > -1
 }
 

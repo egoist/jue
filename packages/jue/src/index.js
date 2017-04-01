@@ -3,7 +3,8 @@ function jue(type, opts, children) { // eslint-disable-line complexity
 
   if (type === 'Component') {
     const result = {
-      name: 'Root'
+      name: 'Root',
+      functional: opts.functional
     }
     for (const child of children) {
       switch (child.type) {
@@ -19,6 +20,18 @@ function jue(type, opts, children) { // eslint-disable-line complexity
           result.components = result.components || {}
           result.components[getName(child)] = child.payload
           break
+        case 'Watch':
+          result.watch = result.watch || {}
+          result.watch[getName(child)] = child.payload
+          break
+        case 'Directives':
+          result.directives = result.directives || {}
+          result.directives[getName(child)] = child.payload
+          break
+        case 'Filters':
+          result.filters = result.filters || {}
+          result.filters[getName(child)] = child.payload
+          break
         case 'Data':
         case 'Render':
         case 'Template':
@@ -31,6 +44,8 @@ function jue(type, opts, children) { // eslint-disable-line complexity
         case 'Updated':
         case 'Deactivated':
         case 'Activated':
+        case 'Props':
+        case 'RenderError':
           result[child.type.charAt(0).toLowerCase() + child.type.slice(1)] = child.payload
           break
         default:
@@ -46,5 +61,6 @@ function jue(type, opts, children) { // eslint-disable-line complexity
 function getName(child) {
   return child.opts.name || child.payload.name
 }
+
 
 export default jue

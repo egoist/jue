@@ -4,17 +4,91 @@
 
 ## Install
 
+You will need the `jue` runtime and `babel-preset-vue` for transforming Jue JSX:
+
 ```bash
 yarn add jue
+yarn add babel-preset-jue --dev
 ```
 
-## Usage
+Configure `.babelrc`:
 
 ```js
-const jue = require('jue')
+{
+  "presets": ["jue"]
+}
+```
 
-jue()
-//=> foo
+## Example
+
+**In:**
+
+```jsx
+const Counter = <Component>
+  <Data>{function () {
+    return { count: 0 }
+  }}</Data>
+
+  <Method>{function handleClick() {
+    this.count++
+  }}</Method>
+
+  <Template>{`
+    <button @click="handleClick">{{ count }}</button>
+  `}</Template>
+</Component>
+```
+
+**Out**:
+
+```js
+const Counter = {
+  data() {
+    return { count: 0 }
+  },
+  methods: {
+    handleClick() {
+      this.count++
+    }
+  },
+  template: `<button @click="handleClick">{{ count }}</button>`
+}
+```
+
+Alternatively, you can use Vue JSX with Jue JSX! For example in `render` function:
+
+```js
+const Counter = <Component>
+  <Data>{function () {
+    return { count: 0 }
+  }}</Data>
+
+  <Method>{function handleClick() {
+    this.count++
+  }}</Method>
+
+  <Render>{function () {
+    return <button onClick={this.handleClick}>{this.count}</button>
+  }}</Render>
+</Component>
+```
+
+## Tips
+
+For `methods` and `computed` whose value should be an object, you can define its name via function name or component prop:
+
+```js
+<Method>{function handleClick() {
+  this.count++
+}}</Method>
+```
+
+Is equivalent to:
+
+```js
+<Method name="handleClick">{function () {
+  this.count++
+}}</Method>
 ```
 
 ## Contributing

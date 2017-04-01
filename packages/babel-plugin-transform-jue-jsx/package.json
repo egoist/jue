@@ -2,15 +2,18 @@
   "name": "babel-plugin-transform-jue-jsx",
   "version": "0.1.0",
   "description": "Babel plugin for Jue JSX",
-  "main": "dist/babel-plugin-transform-jue-jsx.common.js",
+  "main": "lib/index.js",
   "unpkg": "dist/babel-plugin-transform-jue-jsx.min.js",
   "files": [
-    "dist"
+    "dist",
+    "lib"
   ],
   "scripts": {
     "lint": "xo index.js",
     "test": "mocha --compilers js:babel-register",
-    "build": "bili --format umd --format cjs --compress",
+    "build": "npm run build:umd && npm run build:cjs",
+    "build:umd": "bili --format umd --compress",
+    "build:cjs": "babel src -d lib",
     "prepublish": "npm run build",
     "fix": "xo index.js --fix",
     "build:example": "babel example/input.js -o example/output.js"
