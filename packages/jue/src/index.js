@@ -62,5 +62,4 @@ function getName(child) {
   return child.opts.name || child.payload.name
 }
 
-
 export default jue
