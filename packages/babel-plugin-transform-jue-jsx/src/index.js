@@ -12,6 +12,7 @@ function isJueTagName(name) {
     'Created',
     'Updated',
     'Mounted',
+    'Destoryed',
     'BeforeDestroy',
     'BeforeCreate',
     'BeforeMount',

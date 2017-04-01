@@ -39,6 +39,7 @@ function jue(type, opts, children) { // eslint-disable-line complexity
         case 'Created':
         case 'BeforeMount':
         case 'Mounted':
+        case 'Destoryed':
         case 'BeforeDestroy':
         case 'BeforeUpdate':
         case 'Updated':
