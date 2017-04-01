@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-jue-jsx",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Babel plugin for Jue JSX",
   "main": "dist/babel-plugin-transform-jue-jsx.common.js",
   "unpkg": "dist/babel-plugin-transform-jue-jsx.min.js",

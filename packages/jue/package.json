@@ -1,6 +1,6 @@
 {
   "name": "jue",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Writing Vue component using JSX.",
   "repository": {
     "url": "egoist/jue",
