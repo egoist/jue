@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "name": "jue-monorepo",
+  "version": "0.0.0",
+  "description": "Writing Vue component using JSX.",
+  "repository": {
+    "url": "egoist/jue",
+    "type": "git"
+  },
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "xo packages/*/src/*.js",
+    "fix": "xo packages/*/src/*.js --fix"
+  },
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "eslint-config-rem": "^3.0.0",
+    "jest-cli": "^18.1.0",
+    "lerna": "2.0.0-beta.38",
+    "xo": "^0.17.1"
+  },
+  "xo": {
+    "extends": "rem",
+    "esnext": true,
+    "envs": [
+      "jest"
+    ]
+  }
+}

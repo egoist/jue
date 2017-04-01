@@ -1,0 +1,29 @@
+{
+  "name": "jue",
+  "version": "0.0.1",
+  "description": "Writing Vue component using JSX.",
+  "repository": {
+    "url": "egoist/jue",
+    "type": "git"
+  },
+  "main": "dist/jue.common.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "npm run lint",
+    "build": "bili --format cjs --format umd --compress",
+    "prepublish": "npm run build"
+  },
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "bili": "^0.14.0",
+    "eslint-config-rem": "^3.0.0",
+    "jest-cli": "^18.1.0"
+  },
+  "xo": false
+}

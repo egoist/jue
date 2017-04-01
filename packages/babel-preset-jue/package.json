@@ -1,0 +1,21 @@
+{
+  "name": "babel-preset-jue",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "url": "egoist/jue",
+    "type": "git"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-transform-jue-jsx": "^0.1.0",
+    "babel-plugin-syntax-jsx": "^6",
+    "babel-helper-vue-jsx-merge-props": "latest"
+  },
+  "xo": false
+}

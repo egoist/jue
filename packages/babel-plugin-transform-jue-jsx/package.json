@@ -1,0 +1,58 @@
+{
+  "name": "babel-plugin-transform-jue-jsx",
+  "version": "0.0.1",
+  "description": "Babel plugin for Jue JSX",
+  "main": "dist/babel-plugin-transform-jue-jsx.common.js",
+  "unpkg": "dist/babel-plugin-transform-jue-jsx.min.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "xo index.js",
+    "test": "mocha --compilers js:babel-register",
+    "build": "bili --format umd --format cjs --compress",
+    "prepublish": "npm run build",
+    "fix": "xo index.js --fix",
+    "build:example": "babel example/input.js -o example/output.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egoist/jue.git"
+  },
+  "keywords": [
+    "vue",
+    "babel",
+    "jsx",
+    "jue"
+  ],
+  "xo": false,
+  "author": "EGOIST <0x142857@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/egoist/jue/issues"
+  },
+  "homepage": "https://github.com/egoist/jue#readme",
+  "dependencies": {
+    "esutils": "^2.0.2"
+  },
+  "peerDependencies": {
+    "babel-helper-vue-jsx-merge-props": "^2.0.0",
+    "babel-plugin-syntax-jsx": "^6.8.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-helper-vue-jsx-merge-props": "^2.0.2",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-syntax-jsx": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-register": "^6.9.0",
+    "bili": "^0.14.0",
+    "chai": "^3.5.0",
+    "eslint": "^2.12.0",
+    "eslint-config-rem": "^3.0.0",
+    "eslint-config-vue": "^2.0.0",
+    "eslint-plugin-vue": "^1.0.0",
+    "mocha": "^2.5.3",
+    "vue": "^2.0.0-alpha.5"
+  }
+}

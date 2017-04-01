@@ -1,0 +1,18 @@
+{
+  "name": "babel-plugin-jue-require",
+  "version": "0.0.1",
+  "description": "Babel plugin that adds jue import declaration if file contains JSX tags",
+  "main": "dist/babel-plugin-jue-require.common.js",
+  "unpkg": "dist/babel-plugin-jue-require.min.js",
+  "scripts": {
+    "build": "bili --format cjs --format umd --compress",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "xo": false,
+  "repository": "egoist/jue",
+  "author": "EGOIST <0x142857@gmail.com>",
+  "license": "MIT"
+}
