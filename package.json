@@ -8,7 +8,7 @@
     "type": "git"
   },
   "scripts": {
-    "test": "npm run lint",
+    "test": "lerna bootstrap && npm run lint",
     "lint": "xo packages/*/src/*.js",
     "fix": "xo packages/*/src/*.js --fix",
     "dev": "lerna bootstrap && vbuild example/index.js -d --template-compiler"
