@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-jue-require",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Babel plugin that adds jue import declaration if file contains JSX tags",
   "main": "dist/babel-plugin-jue-require.common.js",
   "unpkg": "dist/babel-plugin-jue-require.min.js",
